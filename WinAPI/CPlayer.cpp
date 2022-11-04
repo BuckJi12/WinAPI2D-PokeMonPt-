@@ -5,7 +5,6 @@
 #include "CCollider.h"
 #include "CImage.h"
 #include "CAnimator.h"
-#include "CPlayerState.h"
 #include "CStateWalk.h"
 
 #include "CMissile.h"
@@ -17,14 +16,14 @@ CPlayer::CPlayer()
 	m_layer = Layer::Player;
 	m_strName = L"플레이어";
 
-	m_pIdleImage = nullptr;
-	m_pMoveImage = nullptr;
+	/*m_pIdleImage = nullptr;
+	m_pMoveImage = nullptr;*/
 
 	m_vecMoveDir = Vector(0, 0);
 	m_vecLookDir = Vector(0, -1);
 	m_bIsMove = false;
 
-	m_curState = nullptr;
+	m_curState = PlayerState::Idle;
 }
 
 CPlayer::~CPlayer()
@@ -41,7 +40,7 @@ void CPlayer::ChangeState(PlayerState state)
 void CPlayer::Init()
 {
 	m_mapState.insert(make_pair(PlayerState::Walk, new CStateWalk));
-	m_pMoveImage = RESOURCE->LoadImg(L"PlayerMove", L"Image\\PlayerMove.png");
+	/*m_pMoveImage = RESOURCE->LoadImg(L"PlayerMove", L"Image\\PlayerMove.png");
 
 	m_pAnimator = new CAnimator;
 	m_pAnimator->CreateAnimation(L"MoveDown", m_pMoveImage, Vector(0, 0), Vector(66.f, 66.f), Vector(66.f, 0.f), 0.1, 4);
@@ -54,7 +53,7 @@ void CPlayer::Init()
 	m_pAnimator->CreateAnimation(L"StopRight", m_pMoveImage, Vector(0, 188), Vector(66.f, 66.f), Vector(66.f, 0.f), 0.1, 1);
 	m_pAnimator->Play(L"StopDown", false);
 
-	AddComponent(m_pAnimator);
+	AddComponent(m_pAnimator);*/
 
 	AddCollider(ColliderType::Rect, Vector(90, 90), Vector(0, 0));
 }

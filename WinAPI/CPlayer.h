@@ -24,9 +24,9 @@ private:
 	map<PlayerState, CState*> m_mapState;
 	PlayerState m_curState;
 
-	CAnimator* m_pAnimator;
+	/*CAnimator* m_pAnimator;
 	CImage* m_pIdleImage;
-	CImage* m_pMoveImage;
+	CImage* m_pMoveImage;*/
 
 	Vector m_vecMoveDir;
 	Vector m_vecLookDir;
