@@ -3,6 +3,16 @@
 
 class CImage;
 class CAnimator;
+class CState;
+
+enum class PlayerState
+{
+	Idle,
+	Walk,
+	Run,
+
+	Size
+};
 
 class CPlayer : public CGameObject
 {
@@ -11,6 +21,9 @@ public:
 	virtual ~CPlayer();
 
 private:
+	map<PlayerState, CState*> m_mapState;
+	PlayerState m_curState;
+
 	CAnimator* m_pAnimator;
 	CImage* m_pIdleImage;
 	CImage* m_pMoveImage;
@@ -21,6 +34,9 @@ private:
 
 	float m_fSpeed = 200.0f;
 
+public:
+	void ChangeState(PlayerState state);
+
 private:
 	void Init() override;
 	void Update() override;
@@ -28,7 +44,6 @@ private:
 	void Release() override;
 
 	void AnimatorUpdate();
-	void CreateMissile();
 
 	void OnCollisionEnter(CCollider* pOtherCollider) override;
 	void OnCollisionStay(CCollider* pOtherCollider) override;
