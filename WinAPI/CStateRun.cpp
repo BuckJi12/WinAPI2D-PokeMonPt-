@@ -1,18 +1,13 @@
 #include "framework.h"
-#include "CStateWalk.h"
+#include "CStateRun.h"
 
-#include "WinAPI.h"
-#include "CCollider.h"
-#include "CImage.h"
-#include "CAnimator.h"
-#include "CGameObject.h"
-#include "CPlayer.h"
 
-CStateWalk::CStateWalk(CPlayer* player) : CState(player)
+CStateRun::CStateRun(CPlayer* player) : CState(player)
 {
-	m_pMoveImage = nullptr;
+	m_pRunImage = nullptr;
+	m_pAnimator = new CAnimator;
 
-	m_fSpeed = 200;
+	m_fSpeed = 400;
 
 	up = false;
 	down = false;
@@ -20,19 +15,19 @@ CStateWalk::CStateWalk(CPlayer* player) : CState(player)
 	right = false;
 }
 
-CStateWalk::~CStateWalk()
+CStateRun::~CStateRun()
 {
 }
 
-void CStateWalk::Init()
+void CStateRun::Init()
 {
-	m_pMoveImage = RESOURCE->LoadImg(L"PlayerMove", L"Image\\PlayerMove.png");
+	m_pRunImage = RESOURCE->LoadImg(L"PlayerRun", L"Image\\PlayerRun.png");
 
 	m_pAnimator = new CAnimator;
-	m_pAnimator->CreateAnimation(L"MoveDown", m_pMoveImage, Vector(0, 0), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.1, 4);
-	m_pAnimator->CreateAnimation(L"MoveUp", m_pMoveImage, Vector(0, 64), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.1, 4);
-	m_pAnimator->CreateAnimation(L"MoveLeft", m_pMoveImage, Vector(0, 128), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.1, 4);
-	m_pAnimator->CreateAnimation(L"MoveRight", m_pMoveImage, Vector(0, 192), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.1, 4);
+	m_pAnimator->CreateAnimation(L"RunDown", m_pRunImage, Vector(0, 0), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.1, 4);
+	m_pAnimator->CreateAnimation(L"RunUp", m_pRunImage, Vector(0, 64), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.1, 4);
+	m_pAnimator->CreateAnimation(L"RunLeft", m_pRunImage, Vector(0, 128), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.1, 4);
+	m_pAnimator->CreateAnimation(L"RunRight", m_pRunImage, Vector(0, 192), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.1, 4);
 	/*m_pAnimator->CreateAnimation(L"StopDown", m_pMoveImage, Vector(0, 0), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.1, 1);
 	m_pAnimator->CreateAnimation(L"StopUp", m_pMoveImage, Vector(0, 64), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.1, 1);
 	m_pAnimator->CreateAnimation(L"StopLeft", m_pMoveImage, Vector(0, 128), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.1, 1);
@@ -40,47 +35,40 @@ void CStateWalk::Init()
 	
 
 	pPlayer->AddComponent(m_pAnimator);
-	
 }
 
-void CStateWalk::Enter()
+void CStateRun::Enter()
 {
 }
 
-
-void CStateWalk::Update()
+void CStateRun::Update()
 {
-	if (BUTTONDOWN('R'))
-	{
-		pPlayer->ChangeState(PlayerState::Run);
-	}
-
 	if (BUTTONSTAY(VK_DOWN))
 	{
 		pPlayer->m_vecPos.y += m_fSpeed * DT;
 		down = true;
-		m_pAnimator->Play(L"MoveDown", false);
+		m_pAnimator->Play(L"RunDown", false);
 	}
 
 	else if (BUTTONSTAY(VK_UP))
 	{
 		pPlayer->m_vecPos.y -= m_fSpeed * DT;
 		up = true;
-		m_pAnimator->Play(L"MoveUp", false);
+		m_pAnimator->Play(L"RunUp", false);
 	}
 
 	else if (BUTTONSTAY(VK_LEFT))
 	{
 		pPlayer->m_vecPos.x -= m_fSpeed * DT;
 		left = true;
-		m_pAnimator->Play(L"MoveLeft", false);
+		m_pAnimator->Play(L"RunLeft", false);
 	}
 
 	else if (BUTTONSTAY(VK_RIGHT))
 	{
 		pPlayer->m_vecPos.x += m_fSpeed * DT;
 		right = true;
-		m_pAnimator->Play(L"MoveRight", false);
+		m_pAnimator->Play(L"RunRight", false);
 	}
 	else
 	{
@@ -110,11 +98,14 @@ void CStateWalk::Update()
 	{
 		right = false;
 	}
+
+	if (BUTTONDOWN('R'))
+	{
+		pPlayer->ChangeState(PlayerState::Walk);
+	}
 }
 
-
-
-void CStateWalk::Exit()
+void CStateRun::Exit()
 {
 	m_pAnimator->Stop();
 }

@@ -1,19 +1,14 @@
 #pragma once
 #include "CState.h"
-
-class CAnimator;
-class CImage;
-class CPlayer;
-
-class CStateWalk : public CState
+class CStateRun : public CState
 {
 public:
-	CStateWalk(CPlayer* player);
-	virtual ~CStateWalk();
+	CStateRun(CPlayer* player);
+	virtual ~CStateRun();
 
 private:
 	CAnimator* m_pAnimator;
-	CImage* m_pMoveImage;
+	CImage* m_pRunImage;
 
 	float m_fSpeed;
 
@@ -28,5 +23,4 @@ public:
 	virtual void Update() override;
 	virtual void Exit() override;
 };
-
 

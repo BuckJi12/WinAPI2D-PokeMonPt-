@@ -6,6 +6,8 @@
 #include "CImage.h"
 #include "CAnimator.h"
 #include "CStateWalk.h"
+#include "CStateRun.h"
+#include "CStateIdle.h"
 
 #include "CMissile.h"
 
@@ -34,12 +36,16 @@ void CPlayer::ChangeState(PlayerState state)
 {
 	m_mapState[m_curState]->Exit();
 	m_curState = state;
+	m_mapState[m_curState]->Init();
 	m_mapState[m_curState]->Enter();
 }
 
 void CPlayer::Init()
 {
-	m_mapState.insert(make_pair(PlayerState::Walk, new CStateWalk));
+	m_mapState.insert(make_pair(PlayerState::Idle, new CStateIdle(this)));
+	m_mapState.insert(make_pair(PlayerState::Walk, new CStateWalk(this)));
+	m_mapState.insert(make_pair(PlayerState::Run, new CStateRun(this)));
+	m_mapState[m_curState]->Init();
 	/*m_pMoveImage = RESOURCE->LoadImg(L"PlayerMove", L"Image\\PlayerMove.png");
 
 	m_pAnimator = new CAnimator;
@@ -54,7 +60,6 @@ void CPlayer::Init()
 	m_pAnimator->Play(L"StopDown", false);
 
 	AddComponent(m_pAnimator);*/
-
 	AddCollider(ColliderType::Rect, Vector(90, 90), Vector(0, 0));
 }
 

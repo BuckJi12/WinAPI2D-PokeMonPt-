@@ -32,7 +32,7 @@ private:
 	Vector m_vecLookDir;
 	bool m_bIsMove;
 
-	float m_fSpeed = 200.0f;
+	//floa tm_fSpeed = 200.0f;
 
 public:
 	void ChangeState(PlayerState state);

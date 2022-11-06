@@ -192,6 +192,12 @@
     <ClInclude Include="CStateWalk.h">
       <Filter>GameObject\Player\CPlayerState</Filter>
     </ClInclude>
+    <ClInclude Include="CStateRun.h">
+      <Filter>GameObject\Player\CPlayerState</Filter>
+    </ClInclude>
+    <ClInclude Include="CStateIdle.h">
+      <Filter>GameObject\Player\CPlayerState</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinAPI.cpp">
@@ -309,6 +315,12 @@
       <Filter>GameObject\Player\CPlayerState</Filter>
     </ClCompile>
     <ClCompile Include="CStateWalk.cpp">
+      <Filter>GameObject\Player\CPlayerState</Filter>
+    </ClCompile>
+    <ClCompile Include="CStateRun.cpp">
+      <Filter>GameObject\Player\CPlayerState</Filter>
+    </ClCompile>
+    <ClCompile Include="CStateIdle.cpp">
       <Filter>GameObject\Player\CPlayerState</Filter>
     </ClCompile>
   </ItemGroup>

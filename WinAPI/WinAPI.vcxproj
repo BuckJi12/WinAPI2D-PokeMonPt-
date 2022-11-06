@@ -170,6 +170,8 @@
     <ClInclude Include="CImage.h" />
     <ClInclude Include="CSound.h" />
     <ClInclude Include="CSoundManager.h" />
+    <ClInclude Include="CStateIdle.h" />
+    <ClInclude Include="CStateRun.h" />
     <ClInclude Include="CStateWalk.h" />
     <ClInclude Include="CTile.h" />
     <ClInclude Include="CTileButton.h" />
@@ -217,6 +219,8 @@
     <ClCompile Include="CImage.cpp" />
     <ClCompile Include="CSound.cpp" />
     <ClCompile Include="CSoundManager.cpp" />
+    <ClCompile Include="CStateIdle.cpp" />
+    <ClCompile Include="CStateRun.cpp" />
     <ClCompile Include="CStateWalk.cpp" />
     <ClCompile Include="CTile.cpp" />
     <ClCompile Include="CTileButton.cpp" />
