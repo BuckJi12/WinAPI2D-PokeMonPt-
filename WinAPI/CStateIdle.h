@@ -7,7 +7,6 @@ public:
 	virtual ~CStateIdle();
 
 private:
-	CAnimator* m_pAnimator;
 	CImage* m_pIdleImage;
 
 public:

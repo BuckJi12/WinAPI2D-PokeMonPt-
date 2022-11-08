@@ -7,15 +7,9 @@ public:
 	virtual ~CStateRun();
 
 private:
-	CAnimator* m_pAnimator;
 	CImage* m_pRunImage;
 
 	float m_fSpeed;
-
-	bool up;
-	bool down;
-	bool left;
-	bool right;
 
 public:
 	virtual void Init() override;
@@ -23,4 +17,3 @@ public:
 	virtual void Update() override;
 	virtual void Exit() override;
 };
-

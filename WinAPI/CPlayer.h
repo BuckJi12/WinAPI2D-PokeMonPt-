@@ -5,6 +5,8 @@ class CImage;
 class CAnimator;
 class CState;
 
+
+
 enum class PlayerState
 {
 	Idle,
@@ -24,18 +26,21 @@ private:
 	map<PlayerState, CState*> m_mapState;
 	PlayerState m_curState;
 
-	/*CAnimator* m_pAnimator;
-	CImage* m_pIdleImage;
-	CImage* m_pMoveImage;*/
+	CAnimator* m_pAnimator;
 
-	Vector m_vecMoveDir;
-	Vector m_vecLookDir;
-	bool m_bIsMove;
 
-	//floa tm_fSpeed = 200.0f;
+
+public:
+	bool m_dirDown;
+	bool m_dirUp;
+	bool m_dirLeft;
+	bool m_dirRight;
+
 
 public:
 	void ChangeState(PlayerState state);
+	CAnimator* GetAnimator();
+
 
 private:
 	void Init() override;

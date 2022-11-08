@@ -9,7 +9,7 @@
 #include "CStateRun.h"
 #include "CStateIdle.h"
 
-#include "CMissile.h"
+
 
 CPlayer::CPlayer()
 {
@@ -18,12 +18,13 @@ CPlayer::CPlayer()
 	m_layer = Layer::Player;
 	m_strName = L"플레이어";
 
-	/*m_pIdleImage = nullptr;
-	m_pMoveImage = nullptr;*/
+	m_dirDown = true;
+	m_dirUp = false;
+	m_dirLeft = false;
+	m_dirRight = false;
 
-	m_vecMoveDir = Vector(0, 0);
-	m_vecLookDir = Vector(0, -1);
-	m_bIsMove = false;
+
+
 
 	m_curState = PlayerState::Idle;
 }
@@ -36,30 +37,27 @@ void CPlayer::ChangeState(PlayerState state)
 {
 	m_mapState[m_curState]->Exit();
 	m_curState = state;
-	m_mapState[m_curState]->Init();
 	m_mapState[m_curState]->Enter();
 }
+
+CAnimator* CPlayer::GetAnimator()
+{
+	return m_pAnimator;
+}
+
+
 
 void CPlayer::Init()
 {
 	m_mapState.insert(make_pair(PlayerState::Idle, new CStateIdle(this)));
 	m_mapState.insert(make_pair(PlayerState::Walk, new CStateWalk(this)));
 	m_mapState.insert(make_pair(PlayerState::Run, new CStateRun(this)));
-	m_mapState[m_curState]->Init();
-	/*m_pMoveImage = RESOURCE->LoadImg(L"PlayerMove", L"Image\\PlayerMove.png");
-
 	m_pAnimator = new CAnimator;
-	m_pAnimator->CreateAnimation(L"MoveDown", m_pMoveImage, Vector(0, 0), Vector(66.f, 66.f), Vector(66.f, 0.f), 0.1, 4);
-	m_pAnimator->CreateAnimation(L"MoveUp", m_pMoveImage, Vector(0, 66), Vector(66.f, 66.f), Vector(66.f, 0.f), 0.1, 4);
-	m_pAnimator->CreateAnimation(L"MoveLeft", m_pMoveImage, Vector(0, 132), Vector(66.f, 66.f), Vector(66.f, 0.f), 0.1, 4);
-	m_pAnimator->CreateAnimation(L"MoveRight", m_pMoveImage, Vector(0, 188), Vector(66.f, 66.f), Vector(66.f, 0.f), 0.1, 4);
-	m_pAnimator->CreateAnimation(L"StopDown", m_pMoveImage, Vector(0, 0), Vector(66.f, 66.f), Vector(66.f, 0.f), 0.1, 1);
-	m_pAnimator->CreateAnimation(L"StopUp", m_pMoveImage, Vector(0, 66), Vector(66.f, 66.f), Vector(66.f, 0.f), 0.1, 1);
-	m_pAnimator->CreateAnimation(L"StopLeft", m_pMoveImage, Vector(0, 132), Vector(66.f, 66.f), Vector(66.f, 0.f), 0.1, 1);
-	m_pAnimator->CreateAnimation(L"StopRight", m_pMoveImage, Vector(0, 188), Vector(66.f, 66.f), Vector(66.f, 0.f), 0.1, 1);
-	m_pAnimator->Play(L"StopDown", false);
+	m_mapState[PlayerState::Idle]->Init();
+	m_mapState[PlayerState::Walk]->Init();
+	m_mapState[PlayerState::Run]->Init();
 
-	AddComponent(m_pAnimator);*/
+
 	AddCollider(ColliderType::Rect, Vector(90, 90), Vector(0, 0));
 }
 
