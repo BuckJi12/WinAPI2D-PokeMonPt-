@@ -22,8 +22,8 @@ public:
 	CGameObject();
 	virtual ~CGameObject();
 
-protected:
 	Vector m_vecPos;	// 게임오브젝트의 위치
+protected:
 	Vector m_vecScale;	// 게임오브젝트의 크기
 	Layer m_layer;		// 게임오브젝트의 레이어
 	wstring m_strName;	// 게임오브젝트의 이름
@@ -49,11 +49,11 @@ private:
 	void SetSafeToDelete();		// 게임오브젝트 삭제 가능 상태 표시
 public:
 	bool GetReserveDelete();		// 게임오브젝트가 삭제예정인지 확인
+	void AddComponent(CComponent* component);		// 컴포넌트 추가
 
 protected:
 	list<CComponent*> m_listComponent;	// 컴포넌트들을 보관할 자료구조
 
-	void AddComponent(CComponent* component);		// 컴포넌트 추가
 	void RemoveComponent(CComponent* component);	// 컴포넌트 삭제
 
 	void ComponentRender();

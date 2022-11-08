@@ -3,6 +3,18 @@
 
 class CImage;
 class CAnimator;
+class CState;
+class CPokeMon;
+
+
+enum class PlayerState
+{
+	Idle,
+	Walk,
+	Run,
+
+	Size
+};
 
 class CPlayer : public CGameObject
 {
@@ -11,15 +23,24 @@ public:
 	virtual ~CPlayer();
 
 private:
+	map<PlayerState, CState*> m_mapState;
+	PlayerState m_curState;
+
 	CAnimator* m_pAnimator;
-	CImage* m_pIdleImage;
-	CImage* m_pMoveImage;
 
-	Vector m_vecMoveDir;
-	Vector m_vecLookDir;
-	bool m_bIsMove;
 
-	float m_fSpeed = 200.0f;
+public:
+	bool m_dirDown;
+	bool m_dirUp;
+	bool m_dirLeft;
+	bool m_dirRight;
+
+
+public:
+	void ChangeState(PlayerState state);
+	CAnimator* GetAnimator();
+
+
 
 private:
 	void Init() override;
@@ -28,7 +49,6 @@ private:
 	void Release() override;
 
 	void AnimatorUpdate();
-	void CreateMissile();
 
 	void OnCollisionEnter(CCollider* pOtherCollider) override;
 	void OnCollisionStay(CCollider* pOtherCollider) override;
