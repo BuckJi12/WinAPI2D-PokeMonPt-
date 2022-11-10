@@ -163,6 +163,7 @@
     <ClInclude Include="CPlayer.h" />
     <ClInclude Include="CPlayerManager.h" />
     <ClInclude Include="CPokeMon.h" />
+    <ClInclude Include="CPokemonManager.h" />
     <ClInclude Include="CRenderManager.h" />
     <ClInclude Include="CResource.h" />
     <ClInclude Include="CResourceManager.h" />
@@ -217,6 +218,7 @@
     <ClCompile Include="CPlayer.cpp" />
     <ClCompile Include="CPlayerManager.cpp" />
     <ClCompile Include="CPokeMon.cpp" />
+    <ClCompile Include="CPokemonManager.cpp" />
     <ClCompile Include="CRenderManager.cpp" />
     <ClCompile Include="CResource.cpp" />
     <ClCompile Include="CResourceManager.cpp" />

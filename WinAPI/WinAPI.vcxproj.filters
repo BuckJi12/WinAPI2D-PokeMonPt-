@@ -219,6 +219,9 @@
     <ClInclude Include="CPlayerManager.h">
       <Filter>Engine\Manager</Filter>
     </ClInclude>
+    <ClInclude Include="CPokemonManager.h">
+      <Filter>Engine\Manager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinAPI.cpp">
@@ -357,6 +360,9 @@
       <Filter>GameObject\Pokemon\PokemonMove</Filter>
     </ClCompile>
     <ClCompile Include="CPlayerManager.cpp">
+      <Filter>Engine\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="CPokemonManager.cpp">
       <Filter>Engine\Manager</Filter>
     </ClCompile>
   </ItemGroup>

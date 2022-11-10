@@ -14,6 +14,7 @@
 #include "CUIManager.h"
 #include "CSoundManager.h"
 #include "CPlayerManager.h"
+#include "CPokemonManager.h"
 
 CCore::CCore()
 {
@@ -38,6 +39,7 @@ void CCore::Init()
 	UI->Init();
 	SOUND->Init();
 	PLAYER->Init();
+	POKEMON->Init();
 
 	SCENE->Init();
 }
@@ -89,4 +91,5 @@ void CCore::Release()
 	UI->Release();
 	SOUND->Release();
 	PLAYER->Release();
+	POKEMON->Release();
 }
