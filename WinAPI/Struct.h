@@ -149,3 +149,17 @@ struct Color
 	BYTE r, g, b;
 	FLOAT a;
 };
+
+//========================================
+//##			포켓몬 종족값				##
+//========================================
+
+struct BaseStats
+{
+	int hp;
+	int att;
+	int speAtt;
+	int def;
+	int speDef;
+	int speed;
+};

@@ -55,6 +55,12 @@
     <Filter Include="GameObject\Player\CPlayerState">
       <UniqueIdentifier>{bd9115ba-288b-47f4-913f-0fb1b233f28e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject\Pokemon">
+      <UniqueIdentifier>{d53cc1a0-dcdb-4864-a9a4-f94c477f2264}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Pokemon\PokemonMove">
+      <UniqueIdentifier>{4246e161-35ac-4e10-bb24-0251cdbd6b3d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -198,6 +204,18 @@
     <ClInclude Include="CStateWalk.h">
       <Filter>GameObject\Player\CPlayerState</Filter>
     </ClInclude>
+    <ClInclude Include="CPokeMon.h">
+      <Filter>GameObject\Pokemon</Filter>
+    </ClInclude>
+    <ClInclude Include="CGiratina.h">
+      <Filter>GameObject\Pokemon</Filter>
+    </ClInclude>
+    <ClInclude Include="CMove.h">
+      <Filter>GameObject\Pokemon\PokemonMove</Filter>
+    </ClInclude>
+    <ClInclude Include="CBodySlab.h">
+      <Filter>GameObject\Pokemon\PokemonMove</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinAPI.cpp">
@@ -322,6 +340,18 @@
     </ClCompile>
     <ClCompile Include="CStateWalk.cpp">
       <Filter>GameObject\Player\CPlayerState</Filter>
+    </ClCompile>
+    <ClCompile Include="CPokeMon.cpp">
+      <Filter>GameObject\Pokemon</Filter>
+    </ClCompile>
+    <ClCompile Include="CGiratina.cpp">
+      <Filter>GameObject\Pokemon</Filter>
+    </ClCompile>
+    <ClCompile Include="CMove.cpp">
+      <Filter>GameObject\Pokemon\PokemonMove</Filter>
+    </ClCompile>
+    <ClCompile Include="CBodySlab.cpp">
+      <Filter>GameObject\Pokemon\PokemonMove</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
