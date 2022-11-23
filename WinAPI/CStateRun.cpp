@@ -19,10 +19,10 @@ void CStateRun::Init()
 	m_pRunImage = RESOURCE->LoadImg(L"PlayerRun", L"Image\\PlayerRun.png");
 
 
-	pPlayer->GetAnimator()->CreateAnimation(L"RunDown", m_pRunImage, Vector(0, 0), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.3, 4);
-	pPlayer->GetAnimator()->CreateAnimation(L"RunUp", m_pRunImage, Vector(0, 64), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.3, 4);
-	pPlayer->GetAnimator()->CreateAnimation(L"RunLeft", m_pRunImage, Vector(0, 128), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.3, 4);
-	pPlayer->GetAnimator()->CreateAnimation(L"RunRight", m_pRunImage, Vector(0, 192), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.3, 4);
+	pPlayer->GetAnimator()->CreateAnimation(L"RunDown", m_pRunImage, Vector(0, 0), Vector(96.f, 96.f), Vector(96.f, 0.f), 0.3, 4);
+	pPlayer->GetAnimator()->CreateAnimation(L"RunUp", m_pRunImage, Vector(0, 96), Vector(96.f, 96.f), Vector(96.f, 0.f), 0.3, 4);
+	pPlayer->GetAnimator()->CreateAnimation(L"RunLeft", m_pRunImage, Vector(0, 192), Vector(96.f, 96.f), Vector(96.f, 0.f), 0.3, 4);
+	pPlayer->GetAnimator()->CreateAnimation(L"RunRight", m_pRunImage, Vector(0, 288), Vector(96.f, 96.f), Vector(96.f, 0.f), 0.3, 4);
 
 
 }

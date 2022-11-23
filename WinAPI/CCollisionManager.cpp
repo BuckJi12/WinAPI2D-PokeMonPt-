@@ -18,6 +18,7 @@ CCollisionManager::~CCollisionManager()
 void CCollisionManager::Init()
 {
 	CheckLayer(Layer::Tile, Layer::Player);
+	CheckLayer(Layer::Obstacle, Layer::Player);
 }
 
 void CCollisionManager::Update()

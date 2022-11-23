@@ -18,10 +18,10 @@ void CStateIdle::Init()
 	m_pIdleImage = RESOURCE->LoadImg(L"PlayerIdle", L"Image\\PlayerMove.png");
 
 
-	pPlayer->GetAnimator()->CreateAnimation(L"IdleDown", m_pIdleImage, Vector(0, 0), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.1, 1);
-	pPlayer->GetAnimator()->CreateAnimation(L"IdleUp", m_pIdleImage, Vector(0, 64), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.1, 1);
-	pPlayer->GetAnimator()->CreateAnimation(L"IdleLeft", m_pIdleImage, Vector(0, 128), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.1, 1);
-	pPlayer->GetAnimator()->CreateAnimation(L"IdleRight", m_pIdleImage, Vector(0, 192), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.1, 1);
+	pPlayer->GetAnimator()->CreateAnimation(L"IdleDown", m_pIdleImage, Vector(0, 0), Vector(96.f, 96.f), Vector(96.f, 0.f), 0.1, 1);
+	pPlayer->GetAnimator()->CreateAnimation(L"IdleUp", m_pIdleImage, Vector(0, 96), Vector(96.f, 96.f), Vector(96.f, 0.f), 0.1, 1);
+	pPlayer->GetAnimator()->CreateAnimation(L"IdleLeft", m_pIdleImage, Vector(0, 192), Vector(96.f, 96.f), Vector(96.f, 0.f), 0.1, 1);
+	pPlayer->GetAnimator()->CreateAnimation(L"IdleRight", m_pIdleImage, Vector(0, 288), Vector(96.f, 96.f), Vector(96.f, 0.f), 0.1, 1);
 
 }
 

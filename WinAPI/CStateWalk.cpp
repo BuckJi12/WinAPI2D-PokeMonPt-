@@ -23,12 +23,10 @@ void CStateWalk::Init()
 {
 	m_pMoveImage = RESOURCE->LoadImg(L"PlayerMove", L"Image\\PlayerMove.png");
 
-
-	pPlayer->GetAnimator()->CreateAnimation(L"MoveDown", m_pMoveImage, Vector(0, 0), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.3, 4);
-	pPlayer->GetAnimator()->CreateAnimation(L"MoveUp", m_pMoveImage, Vector(0, 64), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.3, 4);
-	pPlayer->GetAnimator()->CreateAnimation(L"MoveLeft", m_pMoveImage, Vector(0, 128), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.3, 4);
-	pPlayer->GetAnimator()->CreateAnimation(L"MoveRight", m_pMoveImage, Vector(0, 192), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.3, 4);
-
+	pPlayer->GetAnimator()->CreateAnimation(L"MoveDown", m_pMoveImage, Vector(0, 0), Vector(96.f, 96.f), Vector(96.f, 0.f), 0.3, 4);
+	pPlayer->GetAnimator()->CreateAnimation(L"MoveUp", m_pMoveImage, Vector(0, 96), Vector(96.f, 96.f), Vector(96.f, 0.f), 0.3, 4);
+	pPlayer->GetAnimator()->CreateAnimation(L"MoveLeft", m_pMoveImage, Vector(0, 192), Vector(96.f, 96.f), Vector(96.f, 0.f), 0.3, 4);
+	pPlayer->GetAnimator()->CreateAnimation(L"MoveRight", m_pMoveImage, Vector(0, 288), Vector(96.f, 96.f), Vector(96.f, 0.f), 0.3, 4);
 
 }
 
