@@ -123,3 +123,17 @@ enum class PokemonState
 	Faint,
 	Size,
 };
+
+//========================================
+//##			아이템 종류	 			##
+//========================================
+
+enum class ItemKind
+{
+	Nothing,
+	Ball,
+	Potion,
+	Special,
+
+	Size,
+};

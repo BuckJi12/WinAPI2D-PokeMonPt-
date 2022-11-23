@@ -61,6 +61,12 @@
     <Filter Include="GameObject\Pokemon\PokemonMove">
       <UniqueIdentifier>{4246e161-35ac-4e10-bb24-0251cdbd6b3d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject\Item">
+      <UniqueIdentifier>{fa5e5ac3-cab2-479c-ae23-485dfb15cd34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Item\Ball">
+      <UniqueIdentifier>{9eff617b-e759-4a2f-aa8b-6dd300986697}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -222,6 +228,9 @@
     <ClInclude Include="CPokemonManager.h">
       <Filter>Engine\Manager</Filter>
     </ClInclude>
+    <ClInclude Include="CItem.h">
+      <Filter>GameObject\Item</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinAPI.cpp">
@@ -364,6 +373,9 @@
     </ClCompile>
     <ClCompile Include="CPokemonManager.cpp">
       <Filter>Engine\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="CItem.cpp">
+      <Filter>GameObject\Item</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -163,3 +163,39 @@ struct BaseStats
 	int speDef;
 	int speed;
 };
+
+//========================================
+//##			포켓몬 능력치				##
+//========================================
+struct PokemonStatus
+{
+	int	level;
+	float curexp;
+	float maxExp;
+
+	int curHp;
+	int TotalHp;
+
+	int att;
+	int speAtt;
+
+	int def;
+	int speDef;
+
+	int speed;
+
+};
+
+//========================================
+//##			아이템 태그				##
+//========================================
+
+struct ItemTagInfo
+{
+	wstring itemName;
+	wstring description;
+	ItemKind itemKind;
+
+	int count;
+	int cost;
+};
