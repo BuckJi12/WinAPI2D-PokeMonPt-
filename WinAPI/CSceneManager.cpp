@@ -5,6 +5,8 @@
 #include "CSceneTitle.h"
 #include "CSceneTileTool.h"
 #include "CSceneStage01.h"
+#include "CBattleScene01.h"
+#include "CTwinLeafTown.h"
 
 CSceneManager::CSceneManager()
 {
@@ -25,6 +27,11 @@ void CSceneManager::Init()
 	m_mapScene.insert(make_pair(GroupScene::TileTool, pSceneTileTool));
 	CScene* pSceneStage01 = new CSceneStage01();
 	m_mapScene.insert(make_pair(GroupScene::Stage01, pSceneStage01));
+	CScene* pBattleScene01 = new CBattleScene01();
+	m_mapScene.insert(make_pair(GroupScene::BattleScene01, pBattleScene01));
+	CScene* pTwinLeafTown = new CTwinLeafTown();
+	m_mapScene.insert(make_pair(GroupScene::TwinLeafTown, pTwinLeafTown));
+
 
 	// 게임씬 자료구조를 순회하며 씬을 초기화
 	for (pair<GroupScene, CScene*> scene : m_mapScene)

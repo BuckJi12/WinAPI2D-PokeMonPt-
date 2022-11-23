@@ -273,6 +273,12 @@
     <ClInclude Include="CBattleScene01.h">
       <Filter>Scene</Filter>
     </ClInclude>
+    <ClInclude Include="CPlayerThrow.h">
+      <Filter>GameObject\ObjectAni</Filter>
+    </ClInclude>
+    <ClInclude Include="CTwinLeafTown.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinAPI.cpp">
@@ -456,6 +462,12 @@
       <Filter>Engine\Asset\UI</Filter>
     </ClCompile>
     <ClCompile Include="CBattleScene01.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayerThrow.cpp">
+      <Filter>GameObject\ObjectAni</Filter>
+    </ClCompile>
+    <ClCompile Include="CTwinLeafTown.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
   </ItemGroup>

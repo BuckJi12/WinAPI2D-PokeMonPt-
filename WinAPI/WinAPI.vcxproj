@@ -175,6 +175,7 @@
     <ClInclude Include="CPlayer.h" />
     <ClInclude Include="CPlayerHPBar.h" />
     <ClInclude Include="CPlayerManager.h" />
+    <ClInclude Include="CPlayerThrow.h" />
     <ClInclude Include="CPokeMon.h" />
     <ClInclude Include="CPokemonManager.h" />
     <ClInclude Include="CRenderManager.h" />
@@ -197,6 +198,7 @@
     <ClInclude Include="CTileButton.h" />
     <ClInclude Include="CTilePanel.h" />
     <ClInclude Include="CTimeManager.h" />
+    <ClInclude Include="CTwinLeafTown.h" />
     <ClInclude Include="CUI.h" />
     <ClInclude Include="CUIManager.h" />
     <ClInclude Include="framework.h" />
@@ -244,6 +246,7 @@
     <ClCompile Include="CPlayer.cpp" />
     <ClCompile Include="CPlayerHPBar.cpp" />
     <ClCompile Include="CPlayerManager.cpp" />
+    <ClCompile Include="CPlayerThrow.cpp" />
     <ClCompile Include="CPokeMon.cpp" />
     <ClCompile Include="CPokemonManager.cpp" />
     <ClCompile Include="CRenderManager.cpp" />
@@ -266,6 +269,7 @@
     <ClCompile Include="CTileButton.cpp" />
     <ClCompile Include="CTilePanel.cpp" />
     <ClCompile Include="CTimeManager.cpp" />
+    <ClCompile Include="CTwinLeafTown.cpp" />
     <ClCompile Include="CUI.cpp" />
     <ClCompile Include="CUIManager.cpp" />
     <ClCompile Include="WinAPI.cpp" />
