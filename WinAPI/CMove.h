@@ -17,5 +17,17 @@ protected:
 	int			m_moveDamage;
 
 
+public:
+	int GetMoveDamage();
+	int GetCurPP();
+	int GetMaxPP();
+	wstring GetMoveName();
+	PType GetMoveType();
+	MoveClass GetMoveClass();
+
+	void SetCurPP(int num);
+	void RecoveryPP();
+
 };
+
 

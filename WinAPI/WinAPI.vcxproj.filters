@@ -240,6 +240,18 @@
     <ClInclude Include="CMonsterBall.h">
       <Filter>GameObject\Item\Ball</Filter>
     </ClInclude>
+    <ClInclude Include="CDragonClaw.h">
+      <Filter>GameObject\Pokemon\PokemonMove</Filter>
+    </ClInclude>
+    <ClInclude Include="CFlameThrower.h">
+      <Filter>GameObject\Pokemon\PokemonMove</Filter>
+    </ClInclude>
+    <ClInclude Include="CShadowDive.h">
+      <Filter>GameObject\Pokemon\PokemonMove</Filter>
+    </ClInclude>
+    <ClInclude Include="CChimchar.h">
+      <Filter>GameObject\Pokemon</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinAPI.cpp">
@@ -394,6 +406,18 @@
     </ClCompile>
     <ClCompile Include="CMonsterBall.cpp">
       <Filter>GameObject\Item\Ball</Filter>
+    </ClCompile>
+    <ClCompile Include="CDragonClaw.cpp">
+      <Filter>GameObject\Pokemon\PokemonMove</Filter>
+    </ClCompile>
+    <ClCompile Include="CFlameThrower.cpp">
+      <Filter>GameObject\Pokemon\PokemonMove</Filter>
+    </ClCompile>
+    <ClCompile Include="CShadowDive.cpp">
+      <Filter>GameObject\Pokemon\PokemonMove</Filter>
+    </ClCompile>
+    <ClCompile Include="CChimchar.cpp">
+      <Filter>GameObject\Pokemon</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

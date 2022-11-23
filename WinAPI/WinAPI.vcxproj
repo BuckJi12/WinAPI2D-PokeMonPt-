@@ -146,11 +146,14 @@
     <ClInclude Include="CButton.h" />
     <ClInclude Include="CCameraController.h" />
     <ClInclude Include="CCameraManager.h" />
+    <ClInclude Include="CChimchar.h" />
     <ClInclude Include="CCollider.h" />
     <ClInclude Include="CCollisionManager.h" />
     <ClInclude Include="CComponent.h" />
     <ClInclude Include="CCore.h" />
+    <ClInclude Include="CDragonClaw.h" />
     <ClInclude Include="CEventManager.h" />
+    <ClInclude Include="CFlameThrower.h" />
     <ClInclude Include="CGameObject.h" />
     <ClInclude Include="CGiratina.h" />
     <ClInclude Include="CGroundTile.h" />
@@ -177,6 +180,7 @@
     <ClInclude Include="CSceneTileTool.h" />
     <ClInclude Include="CSceneTitle.h" />
     <ClInclude Include="CImage.h" />
+    <ClInclude Include="CShadowDive.h" />
     <ClInclude Include="CSound.h" />
     <ClInclude Include="CSoundManager.h" />
     <ClInclude Include="CState.h" />
@@ -205,11 +209,14 @@
     <ClCompile Include="CButton.cpp" />
     <ClCompile Include="CCameraController.cpp" />
     <ClCompile Include="CCameraManager.cpp" />
+    <ClCompile Include="CChimchar.cpp" />
     <ClCompile Include="CCollider.cpp" />
     <ClCompile Include="CCollisionManager.cpp" />
     <ClCompile Include="CComponent.cpp" />
     <ClCompile Include="CCore.cpp" />
+    <ClCompile Include="CDragonClaw.cpp" />
     <ClCompile Include="CEventManager.cpp" />
+    <ClCompile Include="CFlameThrower.cpp" />
     <ClCompile Include="CGameObject.cpp" />
     <ClCompile Include="CGiratina.cpp" />
     <ClCompile Include="CGroundTile.cpp" />
@@ -236,6 +243,7 @@
     <ClCompile Include="CSceneTileTool.cpp" />
     <ClCompile Include="CSceneTitle.cpp" />
     <ClCompile Include="CImage.cpp" />
+    <ClCompile Include="CShadowDive.cpp" />
     <ClCompile Include="CSound.cpp" />
     <ClCompile Include="CSoundManager.cpp" />
     <ClCompile Include="CState.cpp" />
