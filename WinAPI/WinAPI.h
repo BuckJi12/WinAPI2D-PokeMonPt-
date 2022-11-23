@@ -74,12 +74,20 @@ enum class PType
 	Normal,
 	Fire,
 	Water,
+	Electric,
 	Grass,
+	Ice,
+	Fight,
+	Poison,
 	Ground,
-
+	Flying,
+	Psychic,
+	Bug,
+	Rock,
 	Ghost,
-
 	Dragon,
+	Dark,
+	Steel,
 
 	Size,
 };

@@ -264,6 +264,12 @@
     <ClInclude Include="CPlayerHPBar.h">
       <Filter>GameObject\Common</Filter>
     </ClInclude>
+    <ClInclude Include="CMoveButton.h">
+      <Filter>Engine\Asset\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="CCustomButton.h">
+      <Filter>Engine\Asset\UI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinAPI.cpp">
@@ -439,6 +445,12 @@
     </ClCompile>
     <ClCompile Include="COppHPBar.cpp">
       <Filter>GameObject\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="CMoveButton.cpp">
+      <Filter>Engine\Asset\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="CCustomButton.cpp">
+      <Filter>Engine\Asset\UI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

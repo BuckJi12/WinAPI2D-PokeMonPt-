@@ -151,6 +151,7 @@
     <ClInclude Include="CCollisionManager.h" />
     <ClInclude Include="CComponent.h" />
     <ClInclude Include="CCore.h" />
+    <ClInclude Include="CCustomButton.h" />
     <ClInclude Include="CDragonClaw.h" />
     <ClInclude Include="CEventManager.h" />
     <ClInclude Include="CFlameThrower.h" />
@@ -166,6 +167,7 @@
     <ClInclude Include="CMonsterBall.h" />
     <ClInclude Include="CMonsterBallAni.h" />
     <ClInclude Include="CMove.h" />
+    <ClInclude Include="CMoveButton.h" />
     <ClInclude Include="COppHPBar.h" />
     <ClInclude Include="CPanel.h" />
     <ClInclude Include="CPathManager.h" />
@@ -217,6 +219,7 @@
     <ClCompile Include="CCollisionManager.cpp" />
     <ClCompile Include="CComponent.cpp" />
     <ClCompile Include="CCore.cpp" />
+    <ClCompile Include="CCustomButton.cpp" />
     <ClCompile Include="CDragonClaw.cpp" />
     <ClCompile Include="CEventManager.cpp" />
     <ClCompile Include="CFlameThrower.cpp" />
@@ -232,6 +235,7 @@
     <ClCompile Include="CMonsterBall.cpp" />
     <ClCompile Include="CMonsterBallAni.cpp" />
     <ClCompile Include="CMove.cpp" />
+    <ClCompile Include="CMoveButton.cpp" />
     <ClCompile Include="COppHPBar.cpp" />
     <ClCompile Include="CPanel.cpp" />
     <ClCompile Include="CPathManager.cpp" />
