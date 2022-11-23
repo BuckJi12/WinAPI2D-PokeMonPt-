@@ -1,10 +1,18 @@
 #pragma once
 #include "CTile.h"
-class CGroundTile : public CTile
+
+class CWallTile : public CTile
 {
 public:
-	CGroundTile();
-	virtual ~CGroundTile();
+	enum class CollisionDir { Up, Down, Left, Right, None };
+
+public:
+	CWallTile();
+	virtual ~CWallTile();
+
+private:
+	CollisionDir dir;
+	float		 offset;
 
 private:
 	void Init() override;
@@ -16,5 +24,7 @@ private:
 	void OnCollisionEnter(CCollider* pOther) override;
 	void OnCollisionStay(CCollider* pOther) override;
 	void OnCollisionExit(CCollider* pOther) override;
-};
 
+private:
+	CollisionDir GetCollisionDir(CCollider* pOther);
+};

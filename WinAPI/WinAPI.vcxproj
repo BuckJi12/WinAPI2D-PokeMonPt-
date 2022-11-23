@@ -158,7 +158,7 @@
     <ClInclude Include="CFlameThrower.h" />
     <ClInclude Include="CGameObject.h" />
     <ClInclude Include="CGiratina.h" />
-    <ClInclude Include="CGroundTile.h" />
+    <ClInclude Include="CWallTile.h" />
     <ClInclude Include="CImageObject.h" />
     <ClInclude Include="CInputManager.h" />
     <ClInclude Include="CItem.h" />
@@ -229,7 +229,7 @@
     <ClCompile Include="CFlameThrower.cpp" />
     <ClCompile Include="CGameObject.cpp" />
     <ClCompile Include="CGiratina.cpp" />
-    <ClCompile Include="CGroundTile.cpp" />
+    <ClCompile Include="CWallTile.cpp" />
     <ClCompile Include="CImageObject.cpp" />
     <ClCompile Include="CInputManager.cpp" />
     <ClCompile Include="CItem.cpp" />

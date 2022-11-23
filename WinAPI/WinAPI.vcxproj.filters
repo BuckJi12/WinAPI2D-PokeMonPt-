@@ -171,7 +171,7 @@
     <ClInclude Include="CTile.h">
       <Filter>Engine\Asset\Tile</Filter>
     </ClInclude>
-    <ClInclude Include="CGroundTile.h">
+    <ClInclude Include="CWallTile.h">
       <Filter>Engine\Asset\Tile</Filter>
     </ClInclude>
     <ClInclude Include="CImageObject.h">
@@ -362,7 +362,7 @@
     <ClCompile Include="CTile.cpp">
       <Filter>Engine\Asset\Tile</Filter>
     </ClCompile>
-    <ClCompile Include="CGroundTile.cpp">
+    <ClCompile Include="CWallTile.cpp">
       <Filter>Engine\Asset\Tile</Filter>
     </ClCompile>
     <ClCompile Include="CImageObject.cpp">

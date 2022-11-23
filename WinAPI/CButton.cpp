@@ -50,31 +50,39 @@ void CButton::Update()
 
 void CButton::Render()
 {
-	RENDER->FillRect(
-		m_vecRenderPos.x,
-		m_vecRenderPos.y,
-		m_vecRenderPos.x + m_vecScale.x,
-		m_vecRenderPos.y + m_vecScale.y,
-		Color(255, 255, 255, 1)
-	);
+	if (nullptr != m_pImage)
+	{
+		RENDER->Image(
+			m_pImage,
+			m_vecRenderPos.x,
+			m_vecRenderPos.y,
+			m_vecRenderPos.x + (float)m_pImage->GetWidth(),
+			m_vecRenderPos.y + (float)m_pImage->GetHeight()
+		);
 
-	RENDER->FrameRect(
-		m_vecRenderPos.x,
-		m_vecRenderPos.y,
-		m_vecRenderPos.x + m_vecScale.x,
-		m_vecRenderPos.y + m_vecScale.y,
-		Color(0, 0, 0, 1)
-	);
+		RENDER->Text(
+			m_strText,
+			m_vecRenderPos.x,
+			m_vecRenderPos.y,
+			m_vecRenderPos.x + (float)m_pImage->GetWidth(),
+			m_vecRenderPos.y + (float)m_pImage->GetHeight(),
+			m_colorText,
+			m_iSizeText
+		);
+	}
+	else
+	{
 
-	RENDER->Text(
-		m_strText,
-		m_vecRenderPos.x,
-		m_vecRenderPos.y,
-		m_vecRenderPos.x + m_vecScale.x,
-		m_vecRenderPos.y + m_vecScale.y,
-		m_colorText,
-		m_iSizeText
-	);
+		RENDER->Text(
+			m_strText,
+			m_vecRenderPos.x,
+			m_vecRenderPos.y,
+			m_vecRenderPos.x + m_vecScale.x,
+			m_vecRenderPos.y + m_vecScale.y,
+			m_colorText,
+			m_iSizeText
+		);
+	}
 }
 
 void CButton::Release()

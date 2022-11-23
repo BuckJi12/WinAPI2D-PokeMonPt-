@@ -40,21 +40,34 @@ void CPanel::Init()
 
 void CPanel::Render()
 {
-	RENDER->FillRect(
-		m_vecRenderPos.x,
-		m_vecRenderPos.y,
-		m_vecRenderPos.x + m_vecScale.x,
-		m_vecRenderPos.y + m_vecScale.y,
-		Color(255, 255, 255, 1)
-	);
+	if (nullptr != m_pImage)
+	{
+		RENDER->Image(
+			m_pImage,
+			m_vecPos.x,
+			m_vecPos.y,
+			m_vecPos.x + (float)m_pImage->GetWidth(),
+			m_vecPos.y + (float)m_pImage->GetHeight()
+		);
+	}
+	else
+	{
+		RENDER->FillRect(
+			m_vecRenderPos.x,
+			m_vecRenderPos.y,
+			m_vecRenderPos.x + m_vecScale.x,
+			m_vecRenderPos.y + m_vecScale.y,
+			Color(255, 255, 255, 1)
+		);
 
-	RENDER->FrameRect(
-		m_vecRenderPos.x,
-		m_vecRenderPos.y,
-		m_vecRenderPos.x + m_vecScale.x,
-		m_vecRenderPos.y + m_vecScale.y,
-		Color(0, 0, 0, 1)
-	);
+		RENDER->FrameRect(
+			m_vecRenderPos.x,
+			m_vecRenderPos.y,
+			m_vecRenderPos.x + m_vecScale.x,
+			m_vecRenderPos.y + m_vecScale.y,
+			Color(0, 0, 0, 1)
+		);
+	}
 }
 
 void CPanel::Update()
