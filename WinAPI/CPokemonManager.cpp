@@ -1,6 +1,7 @@
 #include "framework.h"
 #include "CPokemonManager.h"
 
+#include "CChimchar.h"
 #include "CGiratina.h"
 
 CPokemonManager::CPokemonManager()
@@ -17,11 +18,14 @@ CPokeMon* CPokemonManager::FindPokeMon(int key)
 	if (iter == m_mapPokemon.end())
 		return nullptr;
 	else
+	{
 		return m_mapPokemon[key];
+	}
 }
 
 void CPokemonManager::Init()
 {
+	m_mapPokemon.insert(make_pair(4, new CChimchar));
 	m_mapPokemon.insert(make_pair(20, new CGiratina));
 }
 
@@ -34,4 +38,3 @@ void CPokemonManager::Release()
 
 	m_mapPokemon.clear();
 }
-

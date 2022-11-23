@@ -23,8 +23,6 @@ void CStateIdle::Init()
 	pPlayer->GetAnimator()->CreateAnimation(L"IdleLeft", m_pIdleImage, Vector(0, 128), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.1, 1);
 	pPlayer->GetAnimator()->CreateAnimation(L"IdleRight", m_pIdleImage, Vector(0, 192), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.1, 1);
 
-
-	pPlayer->AddComponent(pPlayer->GetAnimator());
 }
 
 void CStateIdle::Enter()

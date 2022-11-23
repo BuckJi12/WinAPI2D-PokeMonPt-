@@ -25,7 +25,6 @@ void CStateRun::Init()
 	pPlayer->GetAnimator()->CreateAnimation(L"RunRight", m_pRunImage, Vector(0, 192), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.3, 4);
 
 
-	pPlayer->AddComponent(pPlayer->GetAnimator());
 }
 
 void CStateRun::Enter()

@@ -61,6 +61,7 @@ void CPlayer::Init()
 
 
 	AddCollider(ColliderType::Rect, Vector(90, 90), Vector(0, 0));
+	AddComponent(GetAnimator());
 }
 
 void CPlayer::Update()

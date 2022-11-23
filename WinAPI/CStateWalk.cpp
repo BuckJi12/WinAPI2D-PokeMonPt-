@@ -29,7 +29,6 @@ void CStateWalk::Init()
 	pPlayer->GetAnimator()->CreateAnimation(L"MoveLeft", m_pMoveImage, Vector(0, 128), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.3, 4);
 	pPlayer->GetAnimator()->CreateAnimation(L"MoveRight", m_pMoveImage, Vector(0, 192), Vector(64.f, 64.f), Vector(64.f, 0.f), 0.3, 4);
 
-	pPlayer->AddComponent(pPlayer->GetAnimator());
 
 }
 
@@ -98,5 +97,4 @@ void CStateWalk::Update()
 
 void CStateWalk::Exit()
 {
-	pPlayer->GetAnimator()->Stop();
 }
