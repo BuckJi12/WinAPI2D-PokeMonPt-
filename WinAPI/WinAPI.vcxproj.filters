@@ -67,6 +67,9 @@
     <Filter Include="GameObject\Item\Ball">
       <UniqueIdentifier>{9eff617b-e759-4a2f-aa8b-6dd300986697}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject\ObjectAni">
+      <UniqueIdentifier>{d6323938-cadb-44ae-9c02-e7339e9f644f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -252,6 +255,15 @@
     <ClInclude Include="CChimchar.h">
       <Filter>GameObject\Pokemon</Filter>
     </ClInclude>
+    <ClInclude Include="CMonsterBallAni.h">
+      <Filter>GameObject\ObjectAni</Filter>
+    </ClInclude>
+    <ClInclude Include="COppHPBar.h">
+      <Filter>GameObject\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayerHPBar.h">
+      <Filter>GameObject\Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinAPI.cpp">
@@ -418,6 +430,15 @@
     </ClCompile>
     <ClCompile Include="CChimchar.cpp">
       <Filter>GameObject\Pokemon</Filter>
+    </ClCompile>
+    <ClCompile Include="CMonsterBallAni.cpp">
+      <Filter>GameObject\ObjectAni</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayerHPBar.cpp">
+      <Filter>GameObject\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="COppHPBar.cpp">
+      <Filter>GameObject\Common</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

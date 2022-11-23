@@ -164,10 +164,13 @@
     <ClInclude Include="CMissile.h" />
     <ClInclude Include="CMonster.h" />
     <ClInclude Include="CMonsterBall.h" />
+    <ClInclude Include="CMonsterBallAni.h" />
     <ClInclude Include="CMove.h" />
+    <ClInclude Include="COppHPBar.h" />
     <ClInclude Include="CPanel.h" />
     <ClInclude Include="CPathManager.h" />
     <ClInclude Include="CPlayer.h" />
+    <ClInclude Include="CPlayerHPBar.h" />
     <ClInclude Include="CPlayerManager.h" />
     <ClInclude Include="CPokeMon.h" />
     <ClInclude Include="CPokemonManager.h" />
@@ -227,10 +230,13 @@
     <ClCompile Include="CMissile.cpp" />
     <ClCompile Include="CMonster.cpp" />
     <ClCompile Include="CMonsterBall.cpp" />
+    <ClCompile Include="CMonsterBallAni.cpp" />
     <ClCompile Include="CMove.cpp" />
+    <ClCompile Include="COppHPBar.cpp" />
     <ClCompile Include="CPanel.cpp" />
     <ClCompile Include="CPathManager.cpp" />
     <ClCompile Include="CPlayer.cpp" />
+    <ClCompile Include="CPlayerHPBar.cpp" />
     <ClCompile Include="CPlayerManager.cpp" />
     <ClCompile Include="CPokeMon.cpp" />
     <ClCompile Include="CPokemonManager.cpp" />
