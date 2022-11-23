@@ -231,6 +231,15 @@
     <ClInclude Include="CItem.h">
       <Filter>GameObject\Item</Filter>
     </ClInclude>
+    <ClInclude Include="CBall.h">
+      <Filter>GameObject\Item\Ball</Filter>
+    </ClInclude>
+    <ClInclude Include="CMasterBall.h">
+      <Filter>GameObject\Item\Ball</Filter>
+    </ClInclude>
+    <ClInclude Include="CMonsterBall.h">
+      <Filter>GameObject\Item\Ball</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinAPI.cpp">
@@ -376,6 +385,15 @@
     </ClCompile>
     <ClCompile Include="CItem.cpp">
       <Filter>GameObject\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="CBall.cpp">
+      <Filter>GameObject\Item\Ball</Filter>
+    </ClCompile>
+    <ClCompile Include="CMasterBall.cpp">
+      <Filter>GameObject\Item\Ball</Filter>
+    </ClCompile>
+    <ClCompile Include="CMonsterBall.cpp">
+      <Filter>GameObject\Item\Ball</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

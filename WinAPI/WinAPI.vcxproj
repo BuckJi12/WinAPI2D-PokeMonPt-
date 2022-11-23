@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClInclude Include="CAnimation.h" />
     <ClInclude Include="CAnimator.h" />
+    <ClInclude Include="CBall.h" />
     <ClInclude Include="CBodySlab.h" />
     <ClInclude Include="CButton.h" />
     <ClInclude Include="CCameraController.h" />
@@ -156,8 +157,10 @@
     <ClInclude Include="CImageObject.h" />
     <ClInclude Include="CInputManager.h" />
     <ClInclude Include="CItem.h" />
+    <ClInclude Include="CMasterBall.h" />
     <ClInclude Include="CMissile.h" />
     <ClInclude Include="CMonster.h" />
+    <ClInclude Include="CMonsterBall.h" />
     <ClInclude Include="CMove.h" />
     <ClInclude Include="CPanel.h" />
     <ClInclude Include="CPathManager.h" />
@@ -197,6 +200,7 @@
   <ItemGroup>
     <ClCompile Include="CAnimation.cpp" />
     <ClCompile Include="CAnimator.cpp" />
+    <ClCompile Include="CBall.cpp" />
     <ClCompile Include="CBodySlab.cpp" />
     <ClCompile Include="CButton.cpp" />
     <ClCompile Include="CCameraController.cpp" />
@@ -212,8 +216,10 @@
     <ClCompile Include="CImageObject.cpp" />
     <ClCompile Include="CInputManager.cpp" />
     <ClCompile Include="CItem.cpp" />
+    <ClCompile Include="CMasterBall.cpp" />
     <ClCompile Include="CMissile.cpp" />
     <ClCompile Include="CMonster.cpp" />
+    <ClCompile Include="CMonsterBall.cpp" />
     <ClCompile Include="CMove.cpp" />
     <ClCompile Include="CPanel.cpp" />
     <ClCompile Include="CPathManager.cpp" />
