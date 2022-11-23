@@ -31,6 +31,10 @@ enum class GroupScene
 
 	Stage01,
 
+	BattleScene01,
+
+	TwinLeafTown,
+
 	Size,
 };
 
@@ -44,7 +48,7 @@ enum class Layer
 	Tile,
 	Player,
 	Missile,
-	Monster,
+	Obstacle,
 
 	Ui,
 	Size,
@@ -57,9 +61,8 @@ enum class Layer
 enum class TypeTile
 {
 	None,
-	Ground,
-	Platform,
 	Wall,
+	Platform,
 
 	Size,
 };
@@ -93,7 +96,7 @@ enum class PType
 };
 
 //========================================
-//##			포켓몬 상태				##
+//##			포켓몬 주인				##
 //========================================
 
 enum class OwnerType
@@ -126,9 +129,70 @@ enum class MoveClass
 enum class PokemonState
 {
 	Normal,
+	InBattle,
 	Paralysis,
 
 	Faint,
+	Size,
+};
+
+//========================================
+//##			배  틀	턴				##
+//========================================
+
+enum class BattleTurn
+{
+	Player,
+	Opponent,
+
+	Size,
+};
+
+//========================================
+//##			배틀 UI 상태 			##
+//========================================
+
+enum class BattleUIState
+{
+	None,
+	Normal,
+	Fight,
+	Bag,
+	BagBall,
+	BagPotion,
+	Pokemon,
+	Runaway,
+
+	Size,
+};
+
+//========================================
+//##			배틀	 상황				##
+//========================================
+
+enum class BattleSituation
+{
+	Battle,
+	Catch,
+	TakeOutPokemon,
+	CompulsionChange,
+
+	Size,
+};
+
+//========================================
+//##			캐치 상황	 			##
+//========================================
+
+enum class CatchSituation
+{
+	None,
+	level1,
+	level2,
+	level3,
+	level4,
+	fail,
+
 	Size,
 };
 

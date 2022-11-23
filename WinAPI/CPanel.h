@@ -8,12 +8,14 @@ public:
 
 private:
 	Vector	m_vecDragStartPos;
+	CImage* m_pImage;
 	bool	m_bIsDragging;
 	bool	m_bDraggable;
 
 public:
 	bool GetDraggable();
 	void SetDraggable(bool draggable);
+	void SetImage(CImage* pImage);
 
 private:
 	void Init() override;

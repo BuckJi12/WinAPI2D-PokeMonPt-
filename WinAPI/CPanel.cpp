@@ -25,6 +25,15 @@ void CPanel::SetDraggable(bool draggable)
 	m_bDraggable = draggable;
 }
 
+void CPanel::SetImage(CImage* pImage)
+{
+	m_pImage = pImage;
+
+	m_vecScale.x = (float)pImage->GetWidth();
+	m_vecScale.y = (float)pImage->GetHeight();
+
+}
+
 void CPanel::Init()
 {
 }

@@ -25,6 +25,14 @@ void CButton::SetClickedCallback(CallbackFunc pCallback, DWORD_PTR pParam1, DWOR
 	m_pParam2 = pParam2;
 }
 
+void CButton::SetImage(CImage* pImage)
+{
+	m_pImage = pImage;
+
+	m_vecScale.x = (float)pImage->GetWidth();
+	m_vecScale.y = (float)pImage->GetHeight();
+}
+
 void CButton::SetText(const wstring& text, float fontSize, Color color)
 {
 	m_strText = text;

@@ -15,6 +15,7 @@ public:
 	virtual ~CButton();
 
 private:
+	CImage* m_pImage;
 	CallbackFunc	m_pCallback;
 	DWORD_PTR		m_pParam1;
 	DWORD_PTR		m_pParam2;
@@ -25,7 +26,7 @@ private:
 
 public:
 	void SetClickedCallback(CallbackFunc pCallback, DWORD_PTR pParam1, DWORD_PTR pParam2);
-
+	void SetImage(CImage* pImage);
 	void SetText(const wstring& text, float fontSize = 12, Color color = Color(0, 0, 0, 1));
 
 private:
